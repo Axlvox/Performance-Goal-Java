@@ -20,11 +20,11 @@ public class Menu {
 
         while (true) {
 
-            System.out.println("*****************************************************");
-            System.out.println(Cores.TEXT_WHITE_BOLD + "            Botanic Garden - Floricultura            ");
+            System.out.println("*****************************************************" + Cores.TEXT_WHITE_BOLD);
+            System.out.println("            Botanic Garden - Floricultura            ");
             System.out.println("                                                     "  + Cores.TEXT_RESET );
-            System.out.println("*****************************************************" );
-            System.out.println(Cores.TEXT_GREEN_BOLD + "🍀🍂                                                     ");
+            System.out.println("*****************************************************" + Cores.TEXT_GREEN_BOLD);
+            System.out.println("🍀🍂                                                 ");
             System.out.println("🌿          1 - Cadastrar Produto                    ");
             System.out.println("            2 - Listar todos os Produtos             ");
             System.out.println("            3 - Buscar Produto por Número            ");
@@ -34,8 +34,8 @@ public class Menu {
             System.out.println("            7 - Sair                              🌿 ");
             System.out.println("                                                🍂🍀  " + Cores.TEXT_RESET);
             System.out.println("*****************************************************");
-            System.out.println("                                                     ");
-            System.out.println(Cores.TEXT_WHITE_BOLD + "Entre com a opção desejada:                          ");
+            System.out.println("                                                     "+ Cores.TEXT_WHITE_BOLD);
+            System.out.println("Entre com a opção desejada:                          ");
             System.out.println("                                                     ");
 
             try {
