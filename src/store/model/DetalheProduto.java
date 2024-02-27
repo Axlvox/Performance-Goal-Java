@@ -32,5 +32,3 @@ public class DetalheProduto extends Produto {
         this.detalheTipo = tipo;
     }
 }
-
-\\Teste
