@@ -20,19 +20,21 @@ public class Menu {
 
         while (true) {
 
-            System.out.println("*****************************************************" + Cores.TEXT_WHITE_BOLD);
+            System.out.println("*****************************************************" + Cores.TEXT_GREEN_BOLD_BRIGHT);
             System.out.println("            Botanic Garden - Floricultura            ");
             System.out.println("                                                     "  + Cores.TEXT_RESET );
             System.out.println("*****************************************************" + Cores.TEXT_GREEN_BOLD);
             System.out.println("🍀🍂                                                 ");
-            System.out.println("🌿          1 - Cadastrar Produto                    ");
+            System.out.println("🌿                                                   " + Cores.TEXT_WHITE_BOLD);
+            System.out.println("            1 - Cadastrar Produto                    ");
             System.out.println("            2 - Listar todos os Produtos             ");
             System.out.println("            3 - Buscar Produto por Número            ");
             System.out.println("            4 - Adicionar Detalhes                   ");
             System.out.println("            5 - Atualizar Produtos                   ");
             System.out.println("            6 - Apagar Produto                       ");
-            System.out.println("            7 - Sair                              🌿 ");
-            System.out.println("                                                🍂🍀  " + Cores.TEXT_RESET);
+            System.out.println("            7 - Sair                                 " + Cores.TEXT_GREEN_BOLD);
+            System.out.println("                                                  🌿 ");
+            System.out.println("                                                🍂🍀 " + Cores.TEXT_RESET);
             System.out.println("*****************************************************");
             System.out.println("                                                     "+ Cores.TEXT_WHITE_BOLD);
             System.out.println("Entre com a opção desejada:                          ");
