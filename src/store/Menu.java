@@ -21,9 +21,10 @@ public class Menu {
 			System.out.println("            1 - Criar Produto                        ");
 			System.out.println("            2 - Listar todos os Produtos             ");
 			System.out.println("            3 - Buscar Produto por Número            ");
-			System.out.println("            4 - Atualizar Produtos                   ");
-			System.out.println("            5 - Apagar Produto                       ");
-			System.out.println("            6 - Sair                                 ");
+			System.out.println("            4 - Adicionar Detalhes                   ");
+			System.out.println("            5 - Atualizar Produtos                   ");
+			System.out.println("            6 - Apagar Produto                       ");
+			System.out.println("            7 - Sair                                 ");
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opção desejada:                          ");
@@ -38,34 +39,32 @@ public class Menu {
 			}
 
 			switch (opcao) {
-				case 1:
-					System.out.println("Criar Produto \n\n");
+		    case 1:
+		        System.out.println("Criar Produto \n\n");
+		        break;
+		    case 2:
+		        System.out.println("Listar todos os Produtos \n\n");
+		        break;
+		    case 3:
+		        System.out.println("Buscar Produto por Número \n\n");
+		        break;
+		    case 4:
+		        System.out.println("Adicionar Detalhes \n\n");
+		        break;
+		    case 5:
+		        System.out.println("Atualizar Produtos \n\n");
+		        break;
+		    case 6:
+		        System.out.println("Apagar Produto  \n\n");
+		        break;
+		    case 7:
+		        System.out.println("Sair \n\n");
+		        break;
+		    default:
+		        System.out.println("\nOpção Inválida!\n");
+		        break;
+		}
 
-					break;
-				case 2:
-					System.out.println("Listar todos os Produtos \n\n");
-
-					break;
-				case 3:
-					System.out.println("Buscar Produto por Número \n\n");
-
-					break;
-				case 4:
-					System.out.println("Atualizar Produtos \n\n");
-
-					break;
-				case 5:
-					System.out.println("Apagar Produto  \n\n");
-
-					break;
-				case 6:
-					System.out.println("Sair \n\n");
-
-					break;
-				default:
-					System.out.println("\nOpção Inválida!\n");
-					break;
-			}
 		}
 	}
 	}
