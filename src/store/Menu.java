@@ -42,51 +42,59 @@ public class Menu {
                 opcao = leia.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("\nDigite valores inteiros!");
-                leia.nextLine(); // Limpar o buffer do scanner
+                leia.nextLine();
                 opcao = 0;
             }
 
             switch (opcao) {
-                case 1:
-                    System.out.println(Cores.TEXT_GREEN + "Criar Produto \n\n");
-                    System.out.println("\nDigite o Número da Planta: ");
-                    codigo = leia.nextInt();
-                    leia.nextLine(); // Limpar o buffer do scanner
-                    System.out.println("\nDigite o Nome da Planta: ");
-                    nome = leia.nextLine();
+            case 1:
+                System.out.println(Cores.TEXT_GREEN + "Criar Produto" + Cores.TEXT_RESET);
+                System.out.println("\nDigite o Número da Planta: ");
+                codigo = leia.nextInt();
+                leia.nextLine();
+                System.out.println("\nDigite o Nome da Planta: ");
+                nome = leia.nextLine();
+                while (true) {
                     System.out.println("\nDigite o Preço da Planta: ");
-                    preco = leia.nextFloat();
-                    leia.nextLine(); // Limpar o buffer do scanner
-                    System.out.println("\nDigite o Tipo de Detalhe da Planta: ");
-                    detalheTipo = leia.nextLine();
-                    System.out.println("\nDigite o Nome Científico da Planta: ");
-                    nomeCientifico = leia.nextLine();
-                    plantas.cadastrar(new DetalheProduto(codigo, nome, preco, detalheTipo, nomeCientifico));
-                    break;
+                    if (leia.hasNextFloat()) {
+                        preco = leia.nextFloat();
+                        break;
+                    } else {
+                        System.out.println(Cores.TEXT_RED_BOLD + "Por favor, insira um valor numérico para o preço." + Cores.TEXT_RESET);
+                        leia.nextLine();
+                    }
+                }
+                leia.nextLine();
+                System.out.println("\nDigite o Tipo de Detalhe da Planta: ");
+                detalheTipo = leia.nextLine();
+                System.out.println("\nDigite o Nome Científico da Planta: ");
+                nomeCientifico = leia.nextLine();
+                plantas.cadastrar(new DetalheProduto(codigo, nome, preco, detalheTipo, nomeCientifico));
+                break;
                 case 2:
-                    System.out.println(Cores.TEXT_GREEN + "Listar todos os Produtos \n\n");
+                    System.out.println(Cores.TEXT_GREEN + "Listar todos os Produtos" + Cores.TEXT_RESET );
                     plantas.listarTodas();
                     break;
                 case 3:
-                    System.out.println(Cores.TEXT_GREEN + "Buscar Produto por Número \n\n");
+                    System.out.println(Cores.TEXT_GREEN + "Buscar Produto por Número" + Cores.TEXT_RESET );
                     System.out.println("\nDigite o Número da Planta: ");
                     codigo = leia.nextInt();
                     plantas.buscarPorNumero(codigo);
                     break;
                 case 4:
-                    System.out.println(Cores.TEXT_GREEN + "Adicionar Detalhes \n\n");
+                    System.out.println(Cores.TEXT_GREEN + "Adicionar Detalhes" + Cores.TEXT_RESET );
                     System.out.println("\nDigite o Número da Planta: ");
                     codigo = leia.nextInt();
-                    leia.nextLine(); // Limpar o buffer do scanner
-                    System.out.println("\nDigite o Detalhe a ser Adicionado: ");
+                    leia.nextLine();
+                    System.out.println("\nDigite o Detalhe a ser Adicionado: " + Cores.TEXT_RESET );
                     detalheTipo = leia.nextLine();
                     plantas.adicionarDetalhes(codigo, detalheTipo);
                     break;
                 case 5:
-                    System.out.println(Cores.TEXT_GREEN + "Atualizar Produtos \n\n");
+                    System.out.println(Cores.TEXT_GREEN + "Atualizar Produtos" + Cores.TEXT_RESET );
                     System.out.println("\nDigite o Número da Planta: ");
                     codigo = leia.nextInt();
-                    leia.nextLine(); // Limpar o buffer do scanner
+                    leia.nextLine();
 
                     var buscaProduto = plantas.buscarPorNumero(codigo);
 
@@ -95,7 +103,7 @@ public class Menu {
                         nome = leia.nextLine();
                         System.out.println("\nDigite o Novo Preço da Planta: ");
                         preco = leia.nextFloat();
-                        leia.nextLine(); // Limpar o buffer do scanner
+                        leia.nextLine();
                         System.out.println("\nDigite o Novo Tipo de Detalhe da Planta: ");
                         detalheTipo = leia.nextLine();
                         System.out.println("\nDigite o Novo Nome Científico da Planta: ");
@@ -109,13 +117,13 @@ public class Menu {
                             detalheProduto.setDetalheTipo(detalheTipo);
                             detalheProduto.setNomeCientifico(nomeCientifico);
                         } else {
-                            System.out.println(Cores.TEXT_RED_BOLD + "Este produto não suporta detalhes adicionais.");
+                            System.out.println(Cores.TEXT_RED_BOLD + "Este produto não suporta detalhes adicionais." + Cores.TEXT_RESET );
                         }
 
                         plantas.atualizar(buscaProduto);
-                        System.out.println(Cores.TEXT_GREEN_BOLD + "Produto atualizado com sucesso!");
+                        System.out.println(Cores.TEXT_GREEN_BOLD + "Produto atualizado com sucesso!" + Cores.TEXT_RESET );
                     } else {
-                        System.out.println(Cores.TEXT_RED_BOLD + "Produto não encontrado.");
+                        System.out.println(Cores.TEXT_RED_BOLD + "Produto não encontrado." + Cores.TEXT_RESET );
                     }
                     break;
                 case 6:
@@ -130,7 +138,7 @@ public class Menu {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println(Cores.TEXT_RED_BOLD + "\nOpção Inválida!\n");
+                    System.out.println(Cores.TEXT_RED_BOLD + "\nOpção Inválida!\n"+ Cores.TEXT_RESET);
                     break;
             }
         }
