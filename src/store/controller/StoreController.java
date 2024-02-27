@@ -1,7 +1,6 @@
 package store.controller;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collection;
 
 import store.model.DetalheProduto;
